@@ -21,7 +21,7 @@ class color:
 
 
 class config:
-	key = ""
+	key = "" #here you want to put your numverify api key
 
 def main():
 	if len(sys.argv) == 2:
