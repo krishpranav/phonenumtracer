@@ -21,7 +21,7 @@ class color:
 
 
 class config:
-	key = "" #here you want to put your numverify api key
+	key = "" #go to numverify login and put the api here
 
 def main():
 	if len(sys.argv) == 2:
@@ -38,39 +38,38 @@ def main():
 
 		print color.YELLOW + "[+] " + color.END + "Phone number information gathering"
 		print "--------------------------------------"
-		time.sleep(1)
+		time.sleep(2)
 
 		if country_code == "":
 			print " - Getting Country		[ " + color.RED + "FAILED " + color.END + "]"
 		else:
 			print " - Getting Country		[ " + color.GREEN + "OK " + color.END + "]"
 
-		time.sleep(1)
+		time.sleep(2)
 		if country_name == "":
 			print " - Getting Country Name		[ " + color.RED + "FAILED " + color.END + "]"
 		else:
 			print " - Getting Country Name		[ " + color.GREEN + "OK " + color.END + "]"
 
-		time.sleep(1)
+		time.sleep(2)
 		if location == "":
 			print " - Getting Location		[ " + color.RED + "FAILED " + color.END + "]"
 		else:
 			print " - Getting Location		[ " + color.GREEN + "OK " + color.END + "]"
-
-		time.sleep(1)
+		time.sleep(2)
 		if carrier == "":
 			print " - Getting Carrier		[ " + color.RED + "FAILED " + color.END + "]"
 		else:
 			print " - Getting Carrier		[ " + color.GREEN + "OK " + color.END + "]"
 
-		time.sleep(1)
+		time.sleep(2)
 		if line_type == None:
 			print " - Getting Device		[ " + color.RED + "FAILED " + color.END + "]"
 		else:
 			print " - Getting Device		[ " + color.GREEN + "OK " + color.END + "]"
-
+		print "--------------------------------------"	
 		print ""
-		print color.YELLOW + "[+] " + color.END + "target Information"
+		print color.YELLOW + "[+] " + color.END + "Target Information"
 		print "--------------------------------------"
 		print " - Phone number: " + str(number)
 		print " - Country: " + str(country_code)
@@ -78,8 +77,9 @@ def main():
 		print " - Location: " + str(location)
 		print " - Carrier: " + str(carrier)
 		print " - Device: " + str(line_type)
+		print "--------------------------------------"
 	else:
-		print "Usage:"
+		print "Usage Of This Tool:"
 		print "	./%s <phone-number>" % (sys.argv[0])
 		print "	./%s +100000000" % (sys.argv[0])
 
